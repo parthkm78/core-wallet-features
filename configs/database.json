@@ -1,0 +1,7 @@
+{
+    "USERNAME":"",
+    "PASSWORD":"",
+    "HOST":"localhost",
+    "PORT":"27017",
+    "AUTH_DB_NAME": "ecDB"
+}

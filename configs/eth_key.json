@@ -1,0 +1,62 @@
+
+{ "mnemonic": "grant teach mosquito harsh noodle local dry robust jacket drastic come soon",
+  "generated_mnemonic": false,
+  "admin": {
+    "usage": "admin",
+    "path": "m/44'/60'/0'/0/0",
+    "private_key": "0x25d0cb98365e3b044bad2186ddd060ce4dcb826d931cdef02eaefa0338be4115",
+    "public_key": "0x04623cedb9a3ebf3e2bdaa8c543287fd291d7ea5e434bf9ad48fed62a3e14e8b0eef103d0b9c82ede4b2ba25574d48ead98608f8a1e85da161f763f296fced3da3",
+    "signer_public_key": "0x623cedb9a3ebf3e2bdaa8c543287fd291d7ea5e434bf9ad48fed62a3e14e8b0eef103d0b9c82ede4b2ba25574d48ead98608f8a1e85da161f763f296fced3da3",
+    "address": "0xc1B422ba76726fBC6e3ad9BDAF5cB626d5FC84EE"
+  },
+  "validators": [
+    {
+      "usage": "validator 1",
+      "path": "m/44'/60'/0'/0/1",
+      "private_key": "0xf9655f52da0a78109994c1a266f829ec2e8d0c747502cc50c397fb23e126fc6e",
+      "public_key": "0x045133e38792e758848914372bf90c7bf0db3178cd92da4f41d95b5d55b6dc367a300cb9ee2515f20847c74488e5c36f417cd8543328e91d3bd8e91f52dd05bc85",
+      "signer_public_key": "0x5133e38792e758848914372bf90c7bf0db3178cd92da4f41d95b5d55b6dc367a300cb9ee2515f20847c74488e5c36f417cd8543328e91d3bd8e91f52dd05bc85",
+      "address": "0x14d76811453183669C4561eF25f57401414DEEfB",
+      "stake": 10000,
+      "balance": 1000,
+      "fee": 200,
+      "validator_id": 1
+    },
+    {
+      "usage": "validator 2",
+      "path": "m/44'/60'/0'/0/2",
+      "private_key": "0x8dca35f05db022c9d12dedfbb44a1355e8d444cd54b7ea6278a06585744f1a62",
+      "public_key": "0x04568a827852d3240dd8615d0ce59bb780a555da0fbc26fe90a7f4bf2e59d3a6af942cf9924b0ac9ec86b0f95c23816c1013fd283b3ab86ea80f373e60408b6e34",
+      "signer_public_key": "0x568a827852d3240dd8615d0ce59bb780a555da0fbc26fe90a7f4bf2e59d3a6af942cf9924b0ac9ec86b0f95c23816c1013fd283b3ab86ea80f373e60408b6e34",
+      "address": "0x901a03fB6A9C82A89D7709a4d1F76a2BDBddE0AE",
+      "stake": 10000,
+      "balance": 1000,
+      "fee": 200,
+      "validator_id": 2
+    },
+    {
+      "usage": "validator 3",
+      "path": "m/44'/60'/0'/0/3",
+      "private_key": "0x4779f491e280f34b7de1283e647d70bf9fc729f106535a49d2e1c97860fa5f3c",
+      "public_key": "0x0479c896155822da275413adabf6d83f9f23b07163f10fa30527c81c6db776b29ce1bd5141b140ed98f01082d342c650e7bca0aeedaeb441965fa46787e1a220fe",
+      "signer_public_key": "0x79c896155822da275413adabf6d83f9f23b07163f10fa30527c81c6db776b29ce1bd5141b140ed98f01082d342c650e7bca0aeedaeb441965fa46787e1a220fe",
+      "address": "0xDfb82DD435f659d4942e7d46671626C14fF2c8c6",
+      "stake": 10000,
+      "balance": 1000,
+      "fee": 200,
+      "validator_id": 3
+    },
+    {
+      "usage": "validator 4",
+      "path": "m/44'/60'/0'/0/4",
+      "private_key": "0xe9937d8d75f7012587241d1da708dda41bdd829a90ce50e81b867d89a48b285a",
+      "public_key": "0x0425643002995abb3c6256ffbbe1fa95f5e206b9456039522c0a0d1875d615eb4b71fc3ac426374fe51f6ead3d158c0ff64a145dcc063a17685111d29389eeddcf",
+      "signer_public_key": "0x25643002995abb3c6256ffbbe1fa95f5e206b9456039522c0a0d1875d615eb4b71fc3ac426374fe51f6ead3d158c0ff64a145dcc063a17685111d29389eeddcf",
+      "address": "0x0c6aCbA90D533d5397Df7Dc46Bb30Fecbe84E71D",
+      "stake": 10000,
+      "balance": 1000,
+      "fee": 200,
+      "validator_id": 4
+    }
+  ]
+}
