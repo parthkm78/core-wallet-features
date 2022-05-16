@@ -45,6 +45,9 @@ app.use("/validator", validatorRouter);
 const balanceRouter = require("./routes/api/balance.js");
 app.use("/balance", balanceRouter);
 
+const tokenRouter = require("./routes/api/token.js");
+app.use("/token", tokenRouter);
+
 // Start Server
 const port = process.env.PORT || 5020;
 http.createServer(null, app).listen(port, () => {
