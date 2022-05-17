@@ -1,16 +1,67 @@
 const { errorResponse, successResponse } = require("../../util/response.js");
 const { ERROR_MESSAGE, HTTP_STATUS_CODE } = require("../../util/constants.js");
 const  logger  = require("../../util/logger.js");
-const validator = require("express-validator");
-const { validationResult } = validator;
-const contracts = require("../../configs/contractAddress.json")
-const eth_keys = require("../../configs/eth_key.json")
-const { ethers,  Wallet, utils } = require('ethers')
-const BoneToken = require("../../configs/contract/BoneToken.json")
-const StakeManager = require("../../configs/contract/StakeManager.json")
-const { getValId } = require("../../util/stake.js");
+const { ethers } = require('ethers');
 const { parseEther } = require("../../util/ether.js");
-const { isVaidatorExists, JsonRpcProvider } = require("../../util/validator.js");
+const { JsonRpcProvider } = require("../../util/validator.js");
+const Web3 = require( "web3" )
+
+const { getClient } = require( "../../client/index.js" )
+
+const config = require("../../util/networkConfig.js");
+
+
+const sendL2Asset = async (req, res) => {
+  try {
+    
+    let clientType = req.params.clientType;
+    let token = req.body.token;
+    let from =  req.body.from;
+    let to =  req.body.to;
+    let amount =  req.body.amount;
+
+    if(!clientType || !token || !from || !to || !amount)
+    {
+      return res.status(HTTP_STATUS_CODE.BAD_REQUEST)
+      .json(errorResponse(ERROR_MESSAGE.REQUIRED_PARAMETERS_MISSING));
+    }
+  
+    const childAddr = await Web3.utils.toChecksumAddress( config.tokens[clientType][token].child );
+    const format = config.tokens[clientType][token].format;
+    const type = config.tokens[clientType][token].type;
+
+    const amountWei = await Web3.utils.toWei( String( amount ), format );
+    console.log("amount wei : ", amountWei)
+
+    if(type !== 'erc20') {
+      logger.info('not implemented yet')
+    }
+
+    const client = await getClient( clientType )
+
+    logger.info(`transferring ${amount} ${token} from ${from} to ${to}`)
+
+    let tx;
+
+    if(token === 'bone' && clientType === 'plasma') {
+      tx = await client.transferMaticEth(to, amountWei, {from : from, value : false })// parent: true, // For token transfer on Main network (false for Matic Network)
+    } else {
+      tx = await client.transferERC20Tokens(childAddr, to, amountWei, {from : from, value : false})  // parent: true, // For token transfer on Main network (false for Matic Network)
+    }
+
+    logger.info(`Transfer Tx: ${tx.transactionHash}`)
+    res.status(HTTP_STATUS_CODE.OK)
+    .json(successResponse("Token / coin send sucessfuly", { transectionHash : tx.transactionHash}));
+  } 
+  catch (err) {
+   logger.error("Internal server error:", err);
+    return res.status(HTTP_STATUS_CODE.INTERNAL_SERVER)
+      .json(errorResponse(ERROR_MESSAGE.INTERNAL_SERVER_ERROR, 
+        { transectionDetail : { transectionHash :  err?.transactionHash,
+                                reason :  err?.reason,
+                                code :  err?.code}} ));
+  };
+};
 
 
 const sendETH = async (req, res) => {
@@ -146,5 +197,6 @@ const sendBone = async (req, res) => {
 // export module
 module.exports = {
   sendETH,
-  sendBone
+  sendBone,
+  sendL2Asset
 };
