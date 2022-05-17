@@ -24,7 +24,7 @@ const getInfo = async (req, res) => {
       .json(errorResponse(ERROR_MESSAGE.REQUIRED_PARAMETERS_MISSING));
     };
     // fetch provider
-    const provider = await JsonRpcProvider(process.env.ROOT_RPC_HTTP);
+    const provider = await JsonRpcProvider(process.env.CHILD_RPC_HTTP);
     // fetch validator
     let validator = await isVaidatorExists(eth_keys, validatorAdd);
     // validator ot exists
