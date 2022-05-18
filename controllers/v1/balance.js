@@ -10,7 +10,7 @@ const bor = async (req, res) => {
     logger.info("-------------");
 
     // take request params
-    const walletAddress = req.params.id;
+    const walletAddress = req.params.address;
     const provider = new ethers.providers.JsonRpcProvider(
       process.env.CHILD_RPC_HTTP
     );
@@ -38,7 +38,7 @@ const eth = async (req, res) => {
   try {
     logger.info("---------");
     // take request params
-    const walletAddress = req.params.id;
+    const walletAddress = req.params.address;
     const provider = new ethers.providers.JsonRpcProvider(
       process.env.ROOT_RPC_HTTP
     );
