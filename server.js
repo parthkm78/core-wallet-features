@@ -51,6 +51,9 @@ app.use("/transfer", transferRouter);
 const tokenRouter = require("./routes/api/token.js");
 app.use("/token", tokenRouter);
 
+const accountRouter = require("./routes/api/account.js");
+app.use("/account", accountRouter);
+
 // Start Server
 const port = process.env.PORT || 5020;
 http.createServer(null, app).listen(port, () => {
