@@ -12,11 +12,11 @@ const { getValId } = require("../../util/stake.js");
 const { parseEther } = require("../../util/ether.js");
 const { isVaidatorExists, JsonRpcProvider } = require("../../util/validator.js");
 
-const { ROOT_RPC_HTTP } = process.env
+//const { CHILD_RPC_HTTP } = process.env
 
-const url = ROOT_RPC_HTTP;
+//const url = CHILD_RPC_HTTP;
 
-const provider = new ethers.providers.JsonRpcProvider(url)
+//const provider = new ethers.providers.JsonRpcProvider(url)
 
 const reStake = async (req, res) => {
   
@@ -49,7 +49,7 @@ const reStake = async (req, res) => {
     }
   
     // fetch provider
-    const provider = await JsonRpcProvider(process.env.ROOT_RPC_HTTP);
+    const provider = await JsonRpcProvider(process.env.CHILD_RPC_HTTP);
     // fetch wallet
     const wallet = new ethers.Wallet(validator.private_key, provider)
   

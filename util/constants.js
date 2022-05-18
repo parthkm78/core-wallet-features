@@ -20,6 +20,7 @@
 const ERROR_MESSAGE = {
     USERNAME_PASSWORD_INCORRECT: "Username or Password is Incorrect",
     REQUIRED_PARAMETERS_MISSING: "Required parameters are missing",
+    INSUFFICIENT_BALANCE: "Insufficient balance",
     INTERNAL_SERVER_ERROR: "Internal server error",
     VALIDATOR_NOT_EXISTS : "validator not exists",
     REQUIRE_TOKEN: "No token available, authorization denied!",
