@@ -1,11 +1,8 @@
 const router = require("express").Router();
-const balanceController = require("../../controllers/v1/balance.js");
+const tokenController = require("../../controllers/v1/token.js");
 const { errorResponse, successResponse } = require("../../util/response.js");
 const { ERROR_MESSAGE, HTTP_STATUS_CODE } = require("../../util/constants.js");
 
-router.get("/bor/:address", balanceController.bor);
+router.get("/info/:tokenAddress", tokenController.getInfo);
 
-router.get("/eth/:address", balanceController.eth);
 module.exports = router;
-
-// /balance/bor/:address
