@@ -16,8 +16,8 @@ const sendL2Asset = async (req, res) => {
     
     let clientType = req.params.clientType;
     let token = req.body.token;
-    let from =  req.body.from;
-    let to =  req.body.to;
+    let from =  await Web3.utils.toChecksumAddress(req.body.from);
+    let to =   await Web3.utils.toChecksumAddress(req.body.to);
     let amount =  req.body.amount;
 
     if(!clientType || !token || !from || !to || !amount)
