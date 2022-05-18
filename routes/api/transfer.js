@@ -22,4 +22,6 @@ router.post("/eth", transferController.sendETH);
 
 router.post("/bone", transferController.sendBone);
 
+router.post("/:clientType", transferController.sendL2Asset);
+
 module.exports = router;

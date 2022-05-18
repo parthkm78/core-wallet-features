@@ -1,0 +1,117 @@
+{
+  "Main": {
+    "NetworkName": "Ethereum",
+    "Network": "rinkeby",
+    "ChainId": 4,
+    "DaggerEndpoint": "??????",
+    "WatcherAPI": "POSSIBLY SUBGRAPH API????????",
+    "StakingAPI": "POSSIBLY SUBGRAPH API?????????",
+    "Explorer": "https://rinkeby.etherscan.io",
+    "Contracts": {
+      "tokens": {
+        "BoneToken": "0x9DB3D91f9C3D81a29E2A8B1FFDE96Cca87Fc9655",
+        "TestToken": "0x1e844a7D95A70b5C0969c5B88010502FB86b6Df8",
+        "RootERC721": "0xF0DfaD3b76C7eDA78263AD0F7B4fc6738C6f49bC",
+        "MaticWeth": "0xaC12D12D5b0AF87b94c6868102d43b9c4c34a883"
+      },
+      "BytesLib": "0x5d75D78Fc03927781eE299833091a56960DcC4ad",
+      "Common": "0x25d6FD413e433e983Ba801D800E041320756c335",
+      "ECVerify": "0x971c9B7861775dC652695559ede23AEf2b5f2477",
+      "Merkle": "0xd9f37F326B2720d03cDd1762697e22093169319e",
+      "MerklePatriciaProof": "0xc09660A9317AdC11180A729452455a4820ae43e8",
+      "PriorityQueue": "0x47183FcEDD152eb4e83f4c1D9cfCc3bB9983d54f",
+      "RLPEncode": "0x2c5F10913a76747F7652AB09FD1aa295fa620a68",
+      "RLPReader": "0x7e854D317Feffe30206Bb26c07b9fd278d6181eb",
+      "SafeMath": "0x36f101BF8Ea661FAbC5E38F668398D714faA2a37",
+      "TransferWithSigUtils": "0xa0f45186a24b1a11Fbb116c3A71a4ED39Ed6a963",
+      "Governance": "0xf6344658b9944d62D14D7177C948d473c0963F13",
+      "GovernanceProxy": "0x13B1b54cD6845c1C5c49509C3Bd27CDA422dD192",
+      "Registry": "0x09e197f2dEdaBc21Eb4b6ca14Bc5Df87C8c9D143",
+      "RootChain": "0x138A8283f66B93976640755F9b507E04c9039Ec7",
+      "RootChainProxy": "0xb9d706E4733F42094EF9a0f0D02Ed833d24E2390",
+      "ValidatorShareFactory": "0x17ae30E1eeFB243b97EE6C30895e251e237f1d2e",
+      "StakingInfo": "0xd6c3B8Cf2FF22E3b6140aE6c87dd697f6f06825D",
+      "StakingNFT": "0xD451FE1725897be7f461F0b799F0DF185C3C63bC",
+      "StakeManager": "0x3D22619eedEAeE02BBfE53b48fC8dc343B82D78f",
+      "StakeManagerProxy": "0x2C47052cBDED79c4FC36B17B506167F5010104a8",
+      "StakeManagerExtension": "0xdeCE85322AC64eb1863154d51143CB193d48D49d",
+      "SlashingManager": "0x4f6FC7b01283D4Fcf3611674B7bd0999CabfB86C",
+      "ValidatorShare": "0x1403522b5959bD274BA5a447ee7E3224c1c1a5C0",
+      "StateSender": "0x3566f9A10087DF9270459A41A16043d09e521a73",
+      "DepositManager": "0x067f21FEa7E65e606D0C3440639Df6a59f587E00",
+      "DepositManagerProxy": "0xD75e8b2C3d8B168b1bEc6E9943d35d72f19860a3",
+      "WithdrawManager": "0x059f3f5585738A067BAa3E3b6B96a9931a6BC10F",
+      "ExitNFT": "0xAA2dDC3bBbd205FBab264Ff20d503d0cFB2F1268",
+      "WithdrawManagerProxy": "0x134bA364Fad28A0E00F8fbdF68e36b9aF51B4388",
+      "EventsHub": "0x245Bc58E5656Ee2B20B96fC053205d4630693AA2",
+      "EventsHubProxy": "0xB915C38820afCe4356E01053095fc372122CBA5E",
+      "ERC20PredicateBurnOnly": "0xAe84f0c369a501a5352f0b27AbEa82b7213aa127",
+      "ERC721PredicateBurnOnly": "0xC156C543836AF395FEb49E023C68e9a6e21dbde0",
+      "MintableERC721Predicate": "0xC88F245CC64194aF2283A57AeB7da2788e8E96dD",
+      "Marketplace": "0xA9c56B7F41b54cA1Fe3668D2965A212FCbA45e20",
+      "MarketplacePredicate": "0x4A358d4b35eBEbc7e0e4c09cead3d8Ea6F1918Ee",
+      "TransferWithSigPredicate": "0x61325dF4E0c5896620ad5073610dF6C3772A07F2"
+    },
+    "POSContracts": {
+      "Merkle": "0x2f63Cdf27Ed64709B6cC540d8BfA9D5F444d5835",
+      "MerklePatriciaProof": "0x793d5B53558c9CDcC7FE5860A656F1dC8275DAD0",
+      "RLPReader": "0x395D68D9F0e8bD89158E4d9B594c69af62DEEF75",
+      "SafeERC20": "0xEB0982cA769e140863127f3c7f15Bc11F5FD110A",
+      "SafeMath": "0x3E9b2E79396620C7883D13130BE8A5F728804C7B",
+      "RootChainManager": "0x0d94cf88B8ac4A0c84E41F8a36B9Cf7761316F3B",
+      "RootChainManagerProxy": "0x100970506beC65e480F2D287b0a098F174857658",
+      "ERC20Predicate": "0xE6Cf76a16c0Fe7394bA6A3c35F15BA67b90186F2",
+      "ERC20PredicateProxy": "0xd3FDB2B712140638b3cDDfbeC84fC367078F0930",
+      "ERC721Predicate": "0xB875B10111841c5d44b153F72a8F5e76c1eECA40",
+      "ERC721PredicateProxy": "0x185FB0EE66C3c5aFB524fC1217eA05B4f2D379B5",
+      "MintableERC721Predicate": "0xB15661cF4105EC7CBd53F482e892bD6Ec175529f",
+      "MintableERC721PredicateProxy": "0x6C201e42200073126d9ACAEd9231A08e666Cf1A3",
+      "ERC1155Predicate": "0xAfBFA5133B70f1eE4cBd9b0FDac1061307fD6a8E",
+      "ERC1155PredicateProxy": "0xd5F06a38e397E5E9f148A470Cf31689819b39AeA",
+      "EtherPredicate": "0xCE5adEe1C278e1063281AA2a489d02c73A35d964",
+      "EtherPredicateProxy": "0x59BB780b847F416bccb88716a149324a8E3A62d1",
+      "DummyStateSender": "0x50a3C935a7029E7C0545816541D1533ae113Bb1C",
+      "DummyERC20": "0xcf5E762f7CE2c9FD2f30Dd528E110D9592790fc1",
+      "DummyERC721": "0x9fc24499d885A96968E2fCd9cD020C1BEEd67623",
+      "DummyMintableERC721": "0x7eb29450E5D2aCaCEb7a1619c503D6D5e6504a31",
+      "DummyERC1155": "0xa59Fb127e867C856CdE0b6336bA587B56598E709"
+    }
+  },
+  "Matic": {
+    "NetworkName": "Shibarium",
+    "ChainId": "6924",
+    "Rpc": "http://3.17.74.204:8545",
+    "DaggerEndpoint": "??????",
+    "Explorer": "etherscan.io subdomain ?????????",
+    "NetworkApi": "POSSIBLY SUBGRAPH API???????",
+    "Contracts": {
+      "ChildChain": "0x864a088dbd53FE2A0c9f63353d7e19bb6597e97d",
+      "tokens": {
+        "MaticWeth": "0xBf1a93ab308cBe6190a804b3E0C4EF4ab3e35037",
+        "BoneToken": "0x0000000000000000000000000000000000001010",
+        "TestToken": "0x351CDacDFFCd61A660ed6Ad9831fAAcEfee7Dd3a",
+        "RootERC721": "0x6FA280b6a52Ba9f7Aa3C878a424066d597e7Bd36"
+      }
+    },
+    "POSContracts": {
+      "ChildChainManager": "0x7ee0bb8F1A679F410580dDc796dF3C2647a8eBa7",
+      "ChildChainManagerProxy": "0x54bE3a3D4f7B021C117C16E1c6283672ae729B1C",
+      "DummyERC20": "0xF027C83c10531AeF3264711a0e8a877Acd0d0207",
+      "DummyMintableERC20": "0x1e3ff91bf135C35fFB38bf3477AFa2bE3C170Cb4",
+      "DummyERC721": "0x517552162e856F666fd4120885C7b02B2f7c2994",
+      "DummyMintableERC721": "0x8d81694e1101ad261f79826cd1B5F3f7278f7deB",
+      "DummyERC1155": "0x5fC134af6C5C8FBb4f342fD40d48d3117E0234b7",
+      "DummyMintableERC1155": "0xce6284c27B25D6AB72AfFc2a18239CcCC3e3Ae09",
+      "MaticWETH": "0x7bcd283f5449bfcc5B5053e8d811B00b1cd01090"
+    },
+    "GenesisContracts": {
+      "BorValidatorSet": "0x0000000000000000000000000000000000001000",
+      "StateReceiver": "0x0000000000000000000000000000000000001001"
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-6924",
+    "Rpc": "http://3.17.74.204:26656",
+    "Rest": "http://3.17.74.204:1317"
+  }
+}

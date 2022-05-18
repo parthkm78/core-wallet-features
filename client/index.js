@@ -2,7 +2,7 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 // const Network = require('../config/network')
 const MaticPlasmaClient = require("../vendor/matic.node").default;
 const { MaticPOSClient } = require("../vendor/matic.node");
-const config = require("../config");
+const config = require("../util/networkConfig.js");
 
 const { MNEMONIC } = process.env;
 
