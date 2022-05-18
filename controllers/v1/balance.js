@@ -4,11 +4,6 @@ const logger = require("../../util/logger.js");
 const validator = require("express-validator");
 const { validationResult } = validator;
 const { ethers } = require("ethers");
-const { CHILD_RPC_HTTP, ROOT_RPC_HTTP } = process.env;
-const url = CHILD_RPC_HTTP;
-
-const provider = new ethers.providers.JsonRpcProvider(url);
-const rootProvider = new ethers.providers.JsonRpcProvider(ROOT_RPC_HTTP);
 
 const bor = async (req, res) => {
   try {
@@ -16,7 +11,9 @@ const bor = async (req, res) => {
 
     // take request params
     const walletAddress = req.params.id;
-
+    const provider = new ethers.providers.JsonRpcProvider(
+      process.env.CHILD_RPC_HTTP
+    );
     const balance = await provider.getBalance(walletAddress);
     const balanceInEth = ethers.utils.formatUnits(balance, "ether");
 
@@ -42,8 +39,10 @@ const eth = async (req, res) => {
     logger.info("---------");
     // take request params
     const walletAddress = req.params.id;
-
-    const balance = await rootProvider.getBalance(walletAddress);
+    const provider = new ethers.providers.JsonRpcProvider(
+      process.env.ROOT_RPC_HTTP
+    );
+    const balance = await provider.getBalance(walletAddress);
     const balanceInEth = ethers.utils.formatUnits(balance, "ether");
 
     logger.info(`${walletAddress},${balanceInEth},ETH`);
