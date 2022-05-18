@@ -45,6 +45,9 @@ app.use("/validator", validatorRouter);
 const balanceRouter = require("./routes/api/balance.js");
 app.use("/balance", balanceRouter);
 
+const transferRouter = require("./routes/api/transfer.js");
+app.use("/transfer", transferRouter);
+
 const tokenRouter = require("./routes/api/token.js");
 app.use("/token", tokenRouter);
 
